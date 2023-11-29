@@ -1,0 +1,49 @@
+
+<Doctype>
+  <html lang="en"></html>
+  <meta charset="UTF-8"/>
+  <title>weather</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Roboto&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="style.css" rel="stylesheet"/>
+</Doctype>
+<body>
+  <div class="container">
+    <div class="weather">
+      <header>
+        <div class="location"><i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="Location" list="dl"/>
+          <datalist id="dl"></datalist>
+        </div>
+        <div class="search"><button class="fa-solid fa-magnifying-glass"></button></div>
+      </header>
+      <main class="hide">
+        <div class="display"><img src="images/clear.png"/></div>
+        <div class="deg"> 
+          <p>40&deg</p>
+        </div>
+        <div class="description">Clear</div>
+      </main>
+      <footer class="hide">
+        <div class="humidity"><i class="fa-solid fa-water"></i>
+          <div class="text">
+            <div class="value">
+              <p>10%</p>
+            </div>
+            <div class="title">Humidity</div>
+          </div>
+        </div>
+        <div class="wind"><i class="fa-solid fa-wind"></i>
+          <div class="text">
+            <div class="value">
+              <p>15Km/h</p>
+            </div>
+            <div class="title">Wind speed</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>

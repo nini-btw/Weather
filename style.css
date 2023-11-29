@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  color: #06283D;
+  background-color: #06283D;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100wh;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.weather header,
+.weather main,
+.weather footer {
+  width: 17rem;
+}
+
+head, main {
+  margin-bottom: 1rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 2rem;
+}
+@elseif $a=="c" {
+  header {
+    justify-content: center;
+  }
+}
+header .search button {
+  cursor: pointer;
+}
+
+main {
+  transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@elseif $a=="c" {
+  main {
+    justify-content: center;
+  }
+}
+main .display {
+  margin-bottom: 1.5rem;
+}
+main .display img {
+  width: 17rem;
+}
+main .deg {
+  margin-bottom: 1rem;
+}
+main.hide {
+  display: none;
+}
+
+footer {
+  transition: 0.5s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@elseif $a=="c" {
+  footer {
+    justify-content: center;
+  }
+}
+footer .humidity,
+footer .wind {
+  display: flex;
+  align-items: center;
+}
+@elseif $a=="c" {
+  footer .humidity,
+  footer .wind {
+    justify-content: center;
+  }
+}
+footer .humidity .text,
+footer .wind .text {
+  margin-left: 1rem;
+}
+footer.hide {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

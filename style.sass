@@ -1,0 +1,69 @@
+$main: #06283D
+
+@mixin fCenter($a)
+    display: flex
+    align-items: center
+    @if $a=='sa'
+        justify-content: space-around
+    @elseif $a=='c'
+        justify-content: center
+
+*
+    margin: 0
+    padding: 0
+    outline: none
+    border: none
+body
+    font-family: 'Roboto', sans-serif
+.container
+    color: $main
+    background-color: $main
+    display: grid
+    place-items: center
+    height: 100vh
+    width: 100wh
+.weather
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    background-color: #fff
+    padding: 1.5rem
+    border-radius: 1.5rem
+    width: fit-content
+    header,
+    main,
+    footer
+        width: 17rem
+head,main
+    margin-bottom: 1rem
+header
+    width: 100%
+    @include fCenter('sa')
+    height: 2rem
+    .search
+        button
+            cursor: pointer
+main
+    transition: 0.5s ease
+    @include fCenter('c')
+    flex-direction: column
+    .display
+        margin-bottom: 1.5rem
+        img
+            width: 17rem
+    .deg
+        margin-bottom: 1rem
+    &.hide
+        display: none
+footer
+    transition: 0.5s ease
+    width: 100%
+    @include fCenter('sa')
+    .humidity,
+    .wind
+        @include fCenter('c')
+        .text
+            margin-left: 1rem
+    &.hide
+        display: none
